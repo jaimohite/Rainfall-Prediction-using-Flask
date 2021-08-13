@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Rainfall-Prediction</title>
+
+</head>
+<body style="background: url('https://wpcdn.us-east-1.vip.tn-cloud.net/www.myneworleans.com/content/uploads/2021/04/r/y/gettyimages-1257951336.jpg') ;background-repeat: no-repeat;background-size: cover;">
+
+<a class="weatherwidget-io" href="https://forecast7.com/en/19d7575d71/maharashtra/" data-label_1="MAHARASHTRA" data-label_2="WEATHER" data-theme="orange" >MAHARASHTRA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+    <div class="container">
+        <h1 class="text-center m-3 badge-primary text-wrap">
+            Rainfall Prediction
+        </h1>
+        <div class="card container" style="width: 50%; ">
+            <div class="card-body">
+                {% if data %}
+                    <div>
+                        <h3>State data</h3>
+                        <p>{{ data }}</p>
+                    </div>
+                {% endif %}
+
+                <form method="post" action="{{url_for('predict')}}" >
+                    <div class="form-group">
+                      <label for="formGroupExampleInput1">Choose a State</label>
+
+                            <select name="State">
+                                <option value="MADHYA MAHARASHTRA" name="MM">MADHYA MAHARASHTRA</option>
+                                <option value="MATATHWADA" name='MW'>MATATHWADA</option>
+                                <option value="VIDARBHA" name='VD'>VIDARBHA</option>
+                                <option value="TAMIL NADU" name='TN'>TAMIL NADU</option>
+                                <option value="WEST RAJASTHAN" name='WR'>WEST RAJASTHAN</option>
+                                <option value="EAST RAJASTHAN" name="ER">EAST RAJASTHAN</option>
+                            </select>
+
+                    </div>
+                    <input type="submit"/>
+                    <!-- <center><button type="submit"  class="btn btn-primary">Submit</button></center> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

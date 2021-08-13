@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Rainfall-Prediction</title>
+
+</head>
+<body style="background: url('https://wpcdn.us-east-1.vip.tn-cloud.net/www.myneworleans.com/content/uploads/2021/04/r/y/gettyimages-1257951336.jpg') ;background-repeat: no-repeat;background-size: cover;">
+
+<a class="weatherwidget-io" href="https://forecast7.com/en/19d7575d71/maharashtra/" data-label_1="MAHARASHTRA" data-label_2="WEATHER" data-theme="orange" >MAHARASHTRA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+ <div class="container">
+    <h1 class="text-center m-3 badge-primary text-wrap">
+        Rainfall Prediction
+      </h1>
+        <div class="card container" style="width: 50%; ">
+
+            <div class="card-body">
+
+                <form action="{{url_for('result')}}" method="post">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput1">Month in No</label>
+                        <input
+                        type="number"
+                        class="form-control"
+                        id="formGroupExampleInput1"
+                        name="Month"
+                        min="1" max= "12"
+                        required
+                        />
+                        </div>
+
+                        <div class="form-group">
+                        <label for="formGroupExampleInput2">Year</label>
+                        <input
+                        type="number"
+                        class="form-control"
+                        id="formGroupExampleInput2"
+                        name="Year"
+                        min="1901"  max="2024"
+                        required
+                        />
+
+
+
+                    </div>
+                    <center><input type="submit"/></center>
+
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+                      <center><a href="/"><button type="submit" class="btn btn-primary">Back</button></a></center>
+                    </div>
+</body>
+</html>
